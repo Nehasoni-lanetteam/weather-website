@@ -4,6 +4,7 @@ const app = express()
 const hbs=require('hbs')
 const geocoding=require('./utils/geocode')
 const forecast=require('./utils/forecast')
+const port=process.env.PORT || 4001
  
 const publicDirectoryPath=path.join(__dirname,'../public')
 const viewsPath=path.join(__dirname,'../templates/views')
@@ -76,8 +77,8 @@ app.get('*',(req,res)=>{
     em:"opps not there"})
 })
 
-app.listen(4001, ()=>{
-    console.log('servere')
+app.listen(port, ()=>{
+    console.log('server')
 })
 
 
