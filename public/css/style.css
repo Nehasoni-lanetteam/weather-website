@@ -13,7 +13,9 @@ body{
 .headerr{
     flex-grow: 1;
 }
-
+.display{
+    color:crimson
+}
 
 
 footer{

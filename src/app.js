@@ -44,6 +44,7 @@ app.get('/weather',(req, res)=>{
             return res.send({error:"oops geocoding gone wrong"})
         }
         forecast(location,(error,dataf)=>{
+            
             if(error){
                 return res.send({error: "something went wrong with forecast"})
             }

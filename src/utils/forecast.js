@@ -12,7 +12,8 @@ const forecast=(address,callback)=>{
             callback("Not found Location", undefined)
         }
         else{
-            callback(undefined,{temperature:body.current.temperature})
+          
+            callback(undefined,"temperature"+ body.current.temperature +"\nWeather Description:"+body.current.weather_descriptions+"\n Humidity"+body.current.humidity)
         }
     })
 }
